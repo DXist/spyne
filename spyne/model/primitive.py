@@ -213,10 +213,10 @@ class Unicode(SimpleModel):
 
 
 def _re_match_with_span(attr, value):
-    if attr.pattern is None:
+    if attr.pattern_re is None:
         return True
 
-    m = attr._pattern_re.match(value)
+    m = attr.pattern_re.match(value)
     return (m is not None) and (m.span() == (0, len(value)))
 
 

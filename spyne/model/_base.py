@@ -423,13 +423,13 @@ class SimpleModel(ModelBase):
             def set_pattern(self, pattern):
                 self._pattern = pattern
                 if pattern is not None:
-                    self._pattern_re = re.compile(pattern)
+                    self.pattern_re = re.compile(pattern)
             pattern = property(get_pattern, set_pattern)
 
         values = set()
         """The set of possible values for this type."""
 
-        _pattern_re = None
+        pattern_re = None
 
     def __new__(cls, **kwargs):
         """Overriden so that any attempt to instantiate a primitive will return
