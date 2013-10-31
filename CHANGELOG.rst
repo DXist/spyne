@@ -27,8 +27,8 @@ spyne-2.11.0
   Sample response: ``{"ver":1, "fault": {"faultcode": "Server", "faultstring": "Internal Error"}}}``
 
 * Steal and integrate the WebSocket tranport for Twisted.
-* Support Django natively using ``spyne.server.django.SpyneView`` and
-  ``spyne.server.django.DjangoServer``\.
+* Support Django natively using :class:`spyne.server.django.SpyneView` and
+  :class:`spyne.server.django.DjangoServer`.
 * It's now possible to override the ``JsonEncoder`` class ``JsonDocument`` uses.
 * Remove hard-coded utf-8 defaults from almost everywhere.
 * Remove hard-coded pytz.utc defaults from everywhere. Use spyne.LOCAL_TZ to
@@ -40,6 +40,8 @@ spyne-2.11.0
 * Add default_factory to ModelBase customizer. It's a callable that produces
   default values on demand. Suitable to be used with e.g. lambdas that return
   mutable defaults.
+* Add mapper between Django models and :class:`spyne.util.django.DjangoComplexModel`
+  types.
 
 spyne-2.10.9
 ------------
